@@ -37,7 +37,7 @@ public:
     SnakeNode* spFood;
     SnakeNode* spHead;
     int m_score;
-    Vector<SnakeNode *> allBody;
+    Vector<SnakeNode *> allBody; //save body node.
     
     static Scene* createScene();
     
@@ -46,6 +46,11 @@ public:
     virtual bool init();
     void menuCallBack(Ref* object);
     void gameLogic(float dt);
+    
+    void newBody(); //add one dody node.
+    void moveBody(); //move all body node.
+    
+    
 };
 
 

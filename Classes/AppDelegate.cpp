@@ -1,7 +1,9 @@
 #include "AppDelegate.h"
 #include "MainMenu.h"
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
+using namespace CocosDenshion;
 
 AppDelegate::AppDelegate() {
 
@@ -31,7 +33,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // run
     director->runWithScene(scene);
-
+    SimpleAudioEngine::getInstance()->playBackgroundMusic("background.mp3");
+    
     return true;
 }
 
